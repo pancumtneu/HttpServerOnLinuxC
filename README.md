@@ -3,3 +3,5 @@
 其中simplehttp.c 实现的是服务端
 getRequest.c实现的是GET    postRequest.c实现的是POST
 编译简单：直接在Linux下gcc就OK了    然后开启服务监听
+有点笨拙，纯粹从底层开始练手
+
