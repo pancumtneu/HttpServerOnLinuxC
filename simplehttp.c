@@ -49,6 +49,7 @@ int main(int argc,char *argv[])
                 recv(connfd,request,1024,0);
                 request[strlen(request)+1]='\0';
                 printf("%s\n",request);
+                printf("%s come in\n",inet_ntoa(client.sin_addr));  //获取连接客户端的IP
                 printf("successeful!\n");
                 char buf[520]="HTTP/1.1 200 ok\r\n  欢迎你 小可爱！  connection: close\r\n\r\n";//HTTP响应
                 int s = send(connfd,buf,strlen(buf),0);//发送响应
